@@ -26,7 +26,7 @@ alert("Ejecución correcta");
        alert("Ejecución correcta: nom="+nombre+"&aps="+apellido+"&nc="+noCotrol+"&ed="+edad);
 	  $.ajax({
 	    type:"POST",
-	    url:"guardarDatos.php",
+	    url:"http://itslmoviles.260mb.net/yaquelin/guardarDatos.php",
 	    data:"nom="+nombre+"&aps="+apellido+"&nc="+noCotrol+"&ed="+edad,
 	    success: respuestaServ
 	  });      
@@ -40,7 +40,7 @@ alert("Ejecución correcta");
     Consultar.click(function consulta(){
       $.ajax({
 	type:"POST",
-	url:"consultaTodo.php",
+	url:"http://itslmoviles.260mb.net/yaquelin/consultaTodo.php",
 	data:"",
 	success: resConsultas
       });
@@ -70,7 +70,7 @@ alert("Ejecución correcta");
       var idConsulta=$("#idConsulta").val();
 	$.ajax({
 	  type:"POST",
-	  url:"consultaUno.php",
+	  url:"http://itslmoviles.260mb.net/yaquelin/consultaUno.php",
 	  data:"id="+idConsulta,
 	  success:resConsUno
 	});
@@ -98,7 +98,7 @@ alert("Ejecución correcta");
     btnMostAct.click(function MostrarDatos(){
       $.ajax({
 	type:"POST",
-	url:"consultaTodo.php",
+	url:"http://itslmoviles.260mb.net/yaquelin/consultaTodo.php",
 	data:"",
 	success: resMostrar
       });
@@ -127,7 +127,7 @@ alert("Ejecución correcta");
       var idActualizar=$("#idActualizar").val();
 	$.ajax({
 	  type:"POST",
-	  url:"consultaUno.php",
+	  url:"http://itslmoviles.260mb.net/yaquelin/consultaUno.php",
 	  data:"id="+idActualizar,
 	  success:resCargarDatos
 	});
@@ -162,7 +162,7 @@ alert("Ejecución correcta");
        //alert("Ejecución correcta: nom="+nombre+"&aps="+apellido+"&nc="+noCotrol+"&ed="+edad);
 	  $.ajax({
 	    type:"POST",
-	    url:"guardarDatosAct.php",
+	    url:"http://itslmoviles.260mb.net/yaquelin/guardarDatosAct.php",
 	    data:"id="+id+"&nom="+nombre+"&aps="+apellido+"&nc="+noCotrol+"&ed="+edad,
 	    success: respGuardarAct
 	  });      
@@ -176,7 +176,7 @@ alert("Ejecución correcta");
     btnMostEliminar.click(function eliminar(){      
       $.ajax({
 	type:"POST",
-	url:"consultaTodo.php",
+	url:"http://itslmoviles.260mb.net/yaquelin/consultaTodo.php",
 	data:"",
 	success: resConsELiminar
       });
@@ -204,7 +204,7 @@ alert("Ejecución correcta");
       var Id=$("#idEliminar").val();
       $.ajax({
 	type:"POST",
-	url:"eliminar.php",
+	url:"http://itslmoviles.260mb.net/yaquelin/eliminar.php",
 	data:"id="+Id,
 	success: eliminado
       });
